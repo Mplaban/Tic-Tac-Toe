@@ -2,7 +2,6 @@ import itertools
 
 play = True 
 player = [1,2]
-game_size=3
 
 
 def win(game_map):
@@ -70,9 +69,9 @@ def game_board(game_map,player=0,row=0,column=0,just_display=False):
 
 
 while play:
-    game =[[0,0,0],
-           [0,0,0],
-           [0,0,0]]
+    game_size=int(input("please input the gameboard size you wanna play on:  "))
+    game=[[0 for i in range(game_size)]for i in range(game_size)]
+
 
     game_won =False 
 
@@ -96,7 +95,7 @@ while play:
                 print("Restrating game....")
 
             elif again.lower() =='n':
-                print("byeeeeeeee....!")
+                print("Byeeeeeeee....THANK YOU FOR PLAYING!")
                 play=False
 
             else:
